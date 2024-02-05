@@ -1,0 +1,27 @@
+@import "../../globalStyles/_variables.scss";
+.image-upload {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+  &-box {
+    border-radius: 4px;
+    width: 60px;
+    height: 62px;
+    border: 2px dashed $light_grey;
+  }
+  &-content {
+    font-size: $font-size-12;
+    color: $grey;
+    .c-blue {
+      color: $blue_color;
+    }
+    .align-center {
+      text-align: center;
+    }
+    .p-12 {
+      padding-left: 12px;
+    }
+  }
+}

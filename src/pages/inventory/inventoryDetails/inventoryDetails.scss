@@ -1,0 +1,19 @@
+@import "../../../globalStyles/_variables.scss";
+.inventory-details {
+  background-color: $primary-color;
+  margin-top: 15px;
+  border-radius: 4px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 15px 6px 15px;
+  }
+  .inventory-button-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .pagination-container {
+    padding: 10px 15px;
+  }
+}

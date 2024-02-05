@@ -1,0 +1,10 @@
+@import "../../globalStyles/_variables.scss";
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        color: $grey ;
+        font-size: $font-size-12;
+    }
+}

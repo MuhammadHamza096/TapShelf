@@ -1,0 +1,27 @@
+@import "../../globalStyles/_variables.scss";
+.table-container {
+  @media (max-width: 600px) {
+    overflow: scroll;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    th,
+    td {
+      border-bottom: 1px solid $light_grey;
+      padding: 10px 18px;
+      text-align: left;
+    }
+    th {
+      font-size: $font-size-14;
+      color: $grey;
+      font-weight: 400;
+    }
+    td {
+      font-size: $font-size-12;
+    }
+    .delete-icon {
+      cursor: pointer;
+    }
+  }
+}

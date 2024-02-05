@@ -1,0 +1,10 @@
+@import "../../globalStyles/_variables.scss";
+.inventory{
+    padding: 15px 15px;
+    h4{
+        @media(max-width:350px) {
+            font-size: $font-size-13;
+            padding-right: 5px;
+        }
+    }
+}
