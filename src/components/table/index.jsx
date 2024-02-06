@@ -7,14 +7,13 @@ const Table = ({ columns, rows, onDelete }) => {
   return (
     <div className="table-container">
       <table>
-        {/* <thead> */}
+
           <tr>
             {columns.map((column) => {
               return <th>{column}</th>;
             })}
           </tr>
-        {/* </thead> */}
-        {/* <tbody> */}
+
           {reversedProducts.map((row) => {
             return (
               <tr>
@@ -32,7 +31,6 @@ const Table = ({ columns, rows, onDelete }) => {
               </tr>
             );
           })}
-        {/* </tbody> */}
       </table>
     </div>
   );

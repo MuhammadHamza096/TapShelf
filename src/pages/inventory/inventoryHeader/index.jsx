@@ -13,6 +13,7 @@ const InventoryHeader = () => {
               <span>Last 7 days</span>
             </div>
           </div>
+          <div className="divider"></div>
           <div className="w-50">
             <h5 className="c-orange">Total Products</h5>
             <div className="header-details-sub m-10">
@@ -26,6 +27,7 @@ const InventoryHeader = () => {
               </div>
             </div>
           </div>
+          <div className="divider"></div>
           <div className="w-50 m-mobile-20">
             <h5 className="c-purple">Total Selling</h5>
             <div className="header-details-sub m-10 p-mobile-30">
@@ -39,14 +41,15 @@ const InventoryHeader = () => {
               </div>
             </div>
           </div>
-          <div className="w-50 m-mobile-20">
+          <div className="divider"></div>
+          <div className="w-50 m-mobile-20 ">
             <h5 className="c-red">Low Stocks</h5>
             <div className="header-details-sub m-10">
               <div>
                 <p>12</p>
                 <span>Ordered</span>
               </div>
-              <div>
+              <div className="align-right">
                 <p>2</p>
                 <span>Not in stock</span>
               </div>

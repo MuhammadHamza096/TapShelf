@@ -15,8 +15,7 @@ const InventoryDetails = () => {
     "Quantity",
     "Threshold Value",
     "Expiry Date",
-    "Delete"
-    // "Availability",
+    "Delete",
   ];
   const rows = [
     {
@@ -28,7 +27,6 @@ const InventoryDetails = () => {
       expiryDate: "11/12/22",
       unit: "kg",
       category: "abc",
-      //   availability: "In-stock",
     },
     {
       id: "2",
@@ -39,7 +37,6 @@ const InventoryDetails = () => {
       expiryDate: "11/12/22",
       unit: "kg",
       category: "abc",
-      //   availability: "In-stock",
     },
     {
       id: "3",
@@ -50,7 +47,6 @@ const InventoryDetails = () => {
       expiryDate: "11/12/22",
       unit: "kg",
       category: "abc",
-      //   availability: "In-stock",
     },
     {
       id: "4",
@@ -61,7 +57,6 @@ const InventoryDetails = () => {
       expiryDate: "11/12/22",
       unit: "kg",
       category: "abc",
-      //   availability: "In-stock",
     },
     {
       id: "5",
@@ -72,7 +67,6 @@ const InventoryDetails = () => {
       expiryDate: "11/12/22",
       unit: "kg",
       category: "abc",
-      //   availability: "In-stock",
     },
   ];
   const [open, setOpen] = useState(false);
@@ -84,7 +78,9 @@ const InventoryDetails = () => {
   };
 
   const handleDelete = (productId) => {
-    const updatedProducts = products.filter((product) => product.id !== productId);
+    const updatedProducts = products.filter(
+      (product) => product.id !== productId
+    );
     setProducts(updatedProducts);
   };
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -115,14 +111,20 @@ const InventoryDetails = () => {
         </div>
       </div>
       <div className="inventory-details-table">
-        <Table rows={displayedProducts} columns={columns} onDelete={handleDelete} />
-        <div className="pagination-container">
-          <Pagination
-            totalPages={Math.ceil(products.length / itemsPerPage)}
-            currentPage={currentPage}
-            onPageChange={handlePageChange}
-          />
-        </div>
+        <Table
+          rows={displayedProducts}
+          columns={columns}
+          onDelete={handleDelete}
+        />
+        {products.length > 0 && (
+          <div className="pagination-container">
+            <Pagination
+              totalPages={Math.ceil(products.length / itemsPerPage)}
+              currentPage={currentPage}
+              onPageChange={handlePageChange}
+            />
+          </div>
+        )}
       </div>
 
       <AddProductModal

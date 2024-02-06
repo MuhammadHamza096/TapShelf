@@ -61,4 +61,14 @@
       color: $red;
     }
   }
+
+  .divider {
+    border: 1px solid $light_grey;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+  .align-right {
+    text-align: right;
+  }
 }
